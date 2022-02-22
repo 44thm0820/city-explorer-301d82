@@ -39,6 +39,10 @@ Drawing collaborated with group partner Liesl White
 
 (https://gallant-engelbart-d8b680.netlify.app/)
 
+## Trello board url
+
+(https://trello.com/b/xGlz6ikd/city-explorer-301d82)
+
 ## Architecture
 
 Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information.
@@ -114,9 +118,9 @@ Estimate of time needed to complete: 10min____
 
 Start time: _758am feb22____
 
-Finish time: _____
+Finish time: 828am_____
 
-Actual time needed to complete: _____
+Actual time needed to complete: _30min____
 
 # Getting Started with Create React App
 
