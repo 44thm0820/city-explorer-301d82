@@ -52,7 +52,7 @@ Finish time: _____
 
 Actual time needed to complete: _____
 
-Name of feature: Set up your React repository and API keys________________________________
+Name of feature: Set up your React repository and API keys_____________- card1___________________
 
 Estimate of time needed to complete: _2 hours____
 
@@ -62,15 +62,24 @@ Finish time: 6:46pm_____
 
 Actual time needed to complete: _4 hours 25 min____
 
-Name of feature: ________________________________
+Name of feature: _card2 feat 1_______________________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1hr_____
 
-Start time: _____
+Start time: ___7pm__
 
-Finish time: _____
+Finish time: __8pm___
 
-Actual time needed to complete: _____
+Actual time needed to complete: __1hr___
+Name of feature: _card2 feat 2_______________________________
+
+Estimate of time needed to complete: __1hour___
+
+Start time: ___8pm__
+
+Finish time: ____1150_
+
+Actual time needed to complete: __5 hours plus___
 
 # Getting Started with Create React App
 
