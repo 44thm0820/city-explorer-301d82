@@ -18,6 +18,10 @@ Provide a high level overview of what this application is and why you are buildi
 
 What are the steps that a user must take in order to build this app on their own machine and get it running?
 
+## Netlify App URL
+
+(https://gallant-engelbart-d8b680.netlify.app/)
+
 ## Architecture
 
 Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information.
@@ -37,6 +41,26 @@ Use this area to document the iterative changes made to your application as each
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
+
+Name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+Name of feature: Set up your React repository and API keys________________________________
+
+Estimate of time needed to complete: _2 hours____
+
+Start time: 2:20pm_____
+
+Finish time: 6:46pm_____
+
+Actual time needed to complete: _4 hours 25 min____
 
 Name of feature: ________________________________
 
