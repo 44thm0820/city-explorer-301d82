@@ -9,6 +9,7 @@ class Main extends React.Component {
   }
 
   handleCityInput = (e) => {
+    e.preventDefault();
     this.setState({ 
       city: e.target.value
     });
@@ -18,11 +19,11 @@ class Main extends React.Component {
     console.log('app state: ', this.state);
     return (
       <>
-        <form>
+        <form onSubmit={this.getCityData}>
           <label>Pick a city!!!
             <input type="text" onInput={this.handleCityInput}/>
           </label>
-          <button>Lets Go!</button>
+          <button type="submit">Explore!</button>
         </form>
       </>
     )
