@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import ListGroup from 'react-bootstrap/ListGroup'
+import { ListGroupItem } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container'
 
 class Main extends React.Component {
   constructor(props){
@@ -20,21 +23,20 @@ class Main extends React.Component {
   getCityData = async (e) => {
     e.preventDefault();
     let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`;
-    //let url = `https://us1.locationiq.com/v1/search.php?key=pk.c829acf7c0504460bca9c3316bd09611&q=${this.state.city}&format=json`;
 
     let cityData = await axios.get(url);
 
     console.log('first ',  cityData.data[0]);
-    // this.setState({
-    //   cityData
-    // })
+    this.setState({
+      cityData: cityData.data[0],
+      lat: cityData.data[0].lat,
+      lon: cityData.data[0].lon,
+      display_name: cityData.data[0].display_name
+    })
   }
 
-
-
   render() {
-    console.log('app state: 830pm : ', this.state);
-    // console.log('hello', this.state.cityData.data[0]);
+    console.log('app state: ', this.state);
 
     return (
       <>
@@ -44,6 +46,15 @@ class Main extends React.Component {
           </label>
           <button type="submit">Explore!</button>
         </form>
+        {Object.keys(this.state.cityData).length > 0 &&
+          <Container>
+            <ListGroup >
+              <ListGroupItem><h6>Your Place: {this.state.display_name}</h6></ListGroupItem>
+              <ListGroupItem><h6>Latitude: {this.state.lat}</h6></ListGroupItem>
+              <ListGroupItem><h6>Longitude: {this.state.lon}</h6></ListGroupItem>
+            </ListGroup>
+          </Container>
+        } 
       </>
     )
   }

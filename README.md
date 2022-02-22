@@ -18,6 +18,23 @@ Provide a high level overview of what this application is and why you are buildi
 
 What are the steps that a user must take in order to build this app on their own machine and get it running?
 
+## Process
+
+For every lab in this module, you will have a new partner. For this lab, you and your new partner(s) will spend the first 15 minutes planning out an approach to this lab’s work on a whiteboard.
+
+## Draw the web request-response cycle for the current lab tasks (about 15 minutes).
+
+Document the data flow: identify inputs and outputs for each part of the cycle.
+Outline the functions that support this data flow.
+Be sure to include these drawings in your README.md.
+You will then work independently for the rest of the day, implementing your plan, coding in your own repository, submitting your own pull request.
+
+## Whiteboard visualization / group work
+
+![Web request-response cycle](./public/Lab06Whiteboard.png "WRRC drawing")
+
+Drawing collaborated with group partner Liesl White
+
 ## Netlify App URL
 
 (https://gallant-engelbart-d8b680.netlify.app/)
@@ -62,7 +79,9 @@ Finish time: 6:46pm_____
 
 Actual time needed to complete: _4 hours 25 min____
 
-Name of feature: _card2 feat 1_______________________________
+Name of feature: card2 feat 1 - build a form
+  card2 Locations:As a user of City Explorer, I want to enter the name of a location so that I can see the exact latitude and longitude of that location. - 
+  feat 1: Build a form to collect a city name from the user. Give the submit button the text of "Explore!"
 
 Estimate of time needed to complete: 1hr_____
 
@@ -71,15 +90,33 @@ Start time: ___7pm__
 Finish time: __8pm___
 
 Actual time needed to complete: __1hr___
-Name of feature: _card2 feat 2_______________________________
+
+Name of feature: card2 feat 2 - lat long
+  card2 As a user of City Explorer, I want to enter the name of a location so that I can see the exact latitude and longitude of that location. 
+  feat 2 - Use the data from the form to query LocationIQ for the latitude and longitude of the requested city.
 
 Estimate of time needed to complete: __1hour___
 
 Start time: ___8pm__
 
-Finish time: ____1150_
+Break time: ____1150pm_
+Continue time: ___1155pm_
+Break time: 1230am Feb 22
+Continue time: 745am Feb 22
+Finish time: ____758am Feb 22_
 
-Actual time needed to complete: __5 hours plus___
+Actual time needed to complete: __4.75 hours about___
+
+Name of feature: _card2feat3 - render lat long to page
+_Update the page with the returned `display_name`, `latitude`, and `longitude`, displayed nicely in an appropriate Bootstrap component. ______________________________
+
+Estimate of time needed to complete: 10min____
+
+Start time: _758am feb22____
+
+Finish time: _____
+
+Actual time needed to complete: _____
 
 # Getting Started with Create React App
 
