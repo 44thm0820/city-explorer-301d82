@@ -22,6 +22,7 @@ class Main extends React.Component {
           <label>Pick a city!!!
             <input type="text" onInput={this.handleCityInput}/>
           </label>
+          <button>Lets Go!</button>
         </form>
       </>
     )
