@@ -9,7 +9,7 @@ class Main extends React.Component {
       cityData: {}
     };
   }
-
+ 
   handleCityInput = (e) => {
     e.preventDefault();
     this.setState({ 
@@ -19,16 +19,23 @@ class Main extends React.Component {
 
   getCityData = async (e) => {
     e.preventDefault();
-
     let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`;
+    //let url = `https://us1.locationiq.com/v1/search.php?key=pk.c829acf7c0504460bca9c3316bd09611&q=${this.state.city}&format=json`;
 
     let cityData = await axios.get(url);
-    
-    console.log(cityData.data[0]);
+
+    console.log('first ',  cityData.data[0]);
+    // this.setState({
+    //   cityData
+    // })
   }
 
+
+
   render() {
-    console.log('app state: ', this.state);
+    console.log('app state: 830pm : ', this.state);
+    // console.log('hello', this.state.cityData.data[0]);
+
     return (
       <>
         <form onSubmit={this.getCityData}>
@@ -41,5 +48,4 @@ class Main extends React.Component {
     )
   }
 }
-
 export default Main;
