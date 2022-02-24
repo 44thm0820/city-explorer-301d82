@@ -55,7 +55,7 @@ class Main extends React.Component {
               <ListGroupItem><h6>Longitude: {this.state.lon}</h6></ListGroupItem>
             </ListGroup>
             <Card>
-              <Card.Img src={urlMap} alt={this.state.display_name} />
+              <Card.Img src={urlMap} alt={this.state.display_name} description={this.state.display_name} title={this.state.display_name}/>
             </Card>
           </Container>
         } 
