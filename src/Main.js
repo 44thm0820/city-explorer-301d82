@@ -3,6 +3,7 @@ import axios from 'axios';
 import ListGroup from 'react-bootstrap/ListGroup'
 import { ListGroupItem } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container'
+import Card from 'react-bootstrap/Card'
 
 class Main extends React.Component {
   constructor(props){
@@ -37,7 +38,7 @@ class Main extends React.Component {
 
   render() {
     console.log('app state: ', this.state);
-
+    let urlMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.state.lat},${this.state.lon}&zoom=12`;
     return (
       <>
         <form onSubmit={this.getCityData}>
@@ -53,6 +54,9 @@ class Main extends React.Component {
               <ListGroupItem><h6>Latitude: {this.state.lat}</h6></ListGroupItem>
               <ListGroupItem><h6>Longitude: {this.state.lon}</h6></ListGroupItem>
             </ListGroup>
+            <Card>
+              <Card.Img src={urlMap} alt={this.state.display_name} />
+            </Card>
           </Container>
         } 
       </>
