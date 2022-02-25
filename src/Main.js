@@ -9,23 +9,16 @@ import Card from 'react-bootstrap/Card'
 class Main extends React.Component {
   constructor(props){
     super(props);
-    // this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
     this.state = {
       citySearched: '',
-      cityData: {}
+      cityData: {},
+      lat: undefined,
+      lon: undefined,
+      display_name: undefined,
+      error: false,
+      errorMessage: ''
     };
   }
-
-  // forceUpdateHandler(){
-  //   this.setState({
-  //     citySearched: '',
-  //     cityData: {},
-  //     lat: '',
-  //     lon: '',
-  //     display_name: ''
-  //   })
-  //   this.forceUpdate();
-  // };
  
   handleCityInput = (e) => {
     e.preventDefault();
@@ -55,9 +48,20 @@ class Main extends React.Component {
         error: true,
         errorMessage: `Status ${error.response.status}. ${error.response.data.error}.`
       })  
-      // this.forceUpdateHandler();    
     }
   }
+
+  getWeatherData = async () => {
+    try {
+      let results = await axios.get(`http://localhost:3001/weather?cityName=${this.state.searchQuery}`);
+      // let results = await axios.get(`${SERVER}/weather?cityName=${this.state.searchQuery}`);
+      console.log('weather data', results.data)
+    } catch(error) {
+      throw new Error('weather pull unsuccessful');
+    }
+  }
+
+
 
   render() {
     console.log('app state: ', this.state);
